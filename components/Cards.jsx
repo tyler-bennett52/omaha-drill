@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-const DisplayedCards = ({ cards }) => {
+const Cards = ({ playerHand }) => {
   return (
     <View style={styles.cards}>
-      {cards.map((card, index) => (
+      {playerHand.map((card, index) => (
         <Text key={index} style={styles.card}>
           {card.value + card.suit}
         </Text>
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DisplayedCards;
+export default Cards;
