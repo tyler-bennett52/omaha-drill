@@ -43,6 +43,7 @@ export default function App() {
   };
 
   return (
+    <>
     <View
       style={{
         flex: 1,
@@ -66,7 +67,8 @@ export default function App() {
         handleClick={handleClick}
         nextTurn={nextTurn}
       />
-      <PositionSelector />
     </View>
+      <PositionSelector />
+      </>
   );
 }
