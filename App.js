@@ -5,6 +5,7 @@ import Header from './components/Header.jsx';
 import HandDescription from './components/HandDescription.jsx';
 import Cards from './components/Cards.jsx';
 import Buttons from './components/Buttons.jsx';
+import PositionSelector from './components/PositionSelector.jsx';
 
 import isPlayable from './helper';
 import shuffledDeck from './deck';
@@ -65,6 +66,7 @@ export default function App() {
         handleClick={handleClick}
         nextTurn={nextTurn}
       />
+      <PositionSelector />
     </View>
   );
 }

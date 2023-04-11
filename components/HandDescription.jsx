@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     marginTop: 10,
-    marginBottom: 5
+    marginBottom: 25
   },
 });
 
