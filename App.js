@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { View, Platform, Text } from 'react-native';
+import { View, Platform, Text, Vibration } from 'react-native';
 
-import Header from './components/Header';
-import HandDescription from './components/HandDescription';
-import Cards from './components/Cards';
-import Buttons from './components/Buttons';
+import Header from './components/Header.jsx';
+import HandDescription from './components/HandDescription.jsx';
+import Cards from './components/Cards.jsx';
+import Buttons from './components/Buttons.jsx';
 
 import isPlayable from './helper';
 import shuffledDeck from './deck';
@@ -29,6 +29,7 @@ export default function App() {
     } else {
       setAnswer('Incorrect, try again');
       setStreak(0);
+      Vibration.vibrate();
     }
     setPromptNextHand(true);
   };
@@ -48,7 +49,7 @@ export default function App() {
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: Platform.OS === 'ios' ? 60 : 0,
-        width: '50%',
+        width: '100%',
       }}
     >
       <Header />
